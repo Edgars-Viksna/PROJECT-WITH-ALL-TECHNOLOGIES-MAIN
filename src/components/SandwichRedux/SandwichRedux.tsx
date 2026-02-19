@@ -58,7 +58,7 @@ export default function SandwichRedux(): JSX.Element {
   padding: '2rem',
   borderRadius: '12px',
   fontSize: '1.9rem',
-  color: '#e3e69b'}}>My Sandwich: {sandwich}</div>
+  color: '#e3e69b'}}>My Sandwich:   {sandwich}</div>
     </div>
   );
 }
