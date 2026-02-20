@@ -10,26 +10,12 @@ export default function SandwichReducer(
   action: Action,
 ): SandwichState {
   switch (action.type) {
-    case "add/bread":
+    case "add/ingridient":
       return {
         ...state,
         value: `${state.value} ${action.payload}`,
       };
-    case "add/avocado":
-      return {
-        ...state,
-        value: state.value + action.payload,
-      };
-    case "add/meat":
-      return {
-        ...state,
-        value: state.value + action.payload,
-      };
-    case "add/salad":
-      return {
-        ...state,
-        value: state.value + action.payload,
-      };
+
     case "eatsandwich":
       return {
         ...state,

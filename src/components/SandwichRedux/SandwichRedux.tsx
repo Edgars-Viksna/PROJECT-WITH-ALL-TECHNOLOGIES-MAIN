@@ -8,19 +8,19 @@ export default function SandwichRedux(): JSX.Element {
   const sandwich = useSelector((state: RootState) => state.sandwich.value);
 
   function handleBread(): void {
-    dispatch({ type: "add/bread", payload: "Bread 🍞" });
+    dispatch({ type: "add/ingridient", payload: "Bread 🍞" });
   }
-
+ 
   function handleAvocado(): void {
-    dispatch({ type: "add/avocado", payload: "Avocado 🥑" });
+    dispatch({ type: "add/ingridient", payload: "Avocado 🥑" });
   }
 
   function handleMeat(): void {
-    dispatch({ type: "add/meat", payload: "Meat 🥩" });
+    dispatch({ type: "add/ingridient", payload: "Meat 🥩" });
   }
 
   function handleSalad(): void {
-    dispatch({ type: "add/salad", payload: "Salad 🥬" });
+    dispatch({ type: "add/ingridient", payload: "Salad 🥬" });
   }
 
   function handleEatSandwich(): void {
