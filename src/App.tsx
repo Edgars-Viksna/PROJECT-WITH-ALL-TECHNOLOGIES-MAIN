@@ -16,6 +16,8 @@ import Products from "./components/Products/types/Products";
 import Product from "./components/Product/Product";
 import WeatherApp from "./components/WeatherApp/WeatherApp.tsx";
 import SandwichRedux from "./components/SandwichRedux/SandwichRedux.tsx";
+import MovieCreation from "./components/Movies/MovieCreation.tsx";
+import Movies from "./components/Movies/Movies.tsx";
 
 export default function App(): JSX.Element {
   return (
@@ -41,6 +43,21 @@ export default function App(): JSX.Element {
           <Route path="/products/:productId" element={<Product />} />
           <Route path="/weatherapp" element={<WeatherApp />} />
           <Route path="/sandwich-redux" element={<SandwichRedux />} />
+          <Route
+            path="/movie-creator"
+            element={
+              <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
+                <div style={{ flex: "1 1 45%", minWidth: "400px" }}>
+                  <MovieCreation />
+                </div>
+
+                <div style={{ flex: "1 1 45%", minWidth: "400px" }}>
+                  <Movies />
+                </div>
+              </div>
+            }
+          />
+          <Route path="/movie" element={<Movies />} />
         </Route>
       </Route>
     </Routes>

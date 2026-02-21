@@ -79,6 +79,12 @@ export default function NavBar(): JSX.Element {
         </li>
 
         <li className={style.listElement}>
+          <NavLink to="/movie-creator" className={style.link}>
+            Movie Creator
+          </NavLink>
+        </li>
+
+        <li className={style.listElement}>
           <button onClick={handleLogout}>Logout</button>
         </li>
       </ul>
