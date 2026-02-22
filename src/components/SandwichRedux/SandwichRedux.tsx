@@ -8,19 +8,19 @@ export default function SandwichRedux(): JSX.Element {
   const sandwich = useSelector((state: RootState) => state.sandwich.value);
 
   function handleBread(): void {
-    dispatch({ type: "add/ingridient", payload: "Bread 🍞" });
+    dispatch({ type: "add/ingridient", payload: " 🍞" });
   }
- 
+
   function handleAvocado(): void {
-    dispatch({ type: "add/ingridient", payload: "Avocado 🥑" });
+    dispatch({ type: "add/ingridient", payload: " 🥑" });
   }
 
   function handleMeat(): void {
-    dispatch({ type: "add/ingridient", payload: "Meat 🥩" });
+    dispatch({ type: "add/ingridient", payload: " 🥩" });
   }
 
   function handleSalad(): void {
-    dispatch({ type: "add/ingridient", payload: "Salad 🥬" });
+    dispatch({ type: "add/ingridient", payload: " 🥬" });
   }
 
   function handleEatSandwich(): void {
@@ -28,37 +28,44 @@ export default function SandwichRedux(): JSX.Element {
   }
 
   return (
-    
     <div>
-        <h1>Sandwich maker 🥪</h1>
-      <button type="button" onClick={handleBread}>
-        {" "}
-        add Bread{" "}
-      </button>
-      <button type="button" onClick={handleAvocado}>
-        {" "}
-        add Avocado{" "}
-      </button>
-      <button type="button" onClick={handleMeat}>
-        {" "}
-        add Meat{" "}
-      </button>
-      <button type="button" onClick={handleSalad}>
-        {" "}
-        add Salad{" "}
-      </button>
-      <button type="button" onClick={handleEatSandwich}>
-        {" "}
-        Eat Sandwich{" "}
-      </button>
+      <h1>Sandwich maker 🥪</h1>
 
-      <div style={{
-  backgroundColor: '#262627',
-  border: '2px solid #0066cc',
-  padding: '2rem',
-  borderRadius: '12px',
-  fontSize: '1.9rem',
-  color: '#e3e69b'}}>My Sandwich:   {sandwich}</div>
+      <div>
+        <button type="button" onClick={handleBread}>
+          {" "}
+          add 🍞{" "}
+        </button>
+        <button type="button" onClick={handleAvocado}>
+          {" "}
+          add 🥑{" "}
+        </button>
+        <button type="button" onClick={handleMeat}>
+          {" "}
+          add 🥩{" "}
+        </button>
+        <button type="button" onClick={handleSalad}>
+          {" "}
+          add 🥬{" "}
+        </button>
+        <button type="button" onClick={handleEatSandwich}>
+          {" "}
+          Eat Sandwich 🍽️{" "}
+        </button>
+
+        <div
+          style={{
+            backgroundColor: "#262627",
+            border: "2px solid #0066cc",
+            padding: "2rem",
+            borderRadius: "12px",
+            fontSize: "1.9rem",
+            color: "#e3e69b",
+          }}
+        >
+          My Sandwich: {sandwich}
+        </div>
+      </div>
     </div>
   );
 }
